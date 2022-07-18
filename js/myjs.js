@@ -29,11 +29,6 @@ $(function () {
     }, 3000);/* LOGO time */     
     
     };
-    /* 頁面轉場 淡出 */
-    $('a').on("click",function() { 
-        $('#swup').addClass('transition-fade');
-        $('#swup').removeClass('transition-fade_in'); //點選後淡出
-       });
 
 
 /* click */
