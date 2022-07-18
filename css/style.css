@@ -234,7 +234,7 @@ main.fade {
     display: block;
     width: 40px;
     height: 4px;
-    background: url(../img/SVG/menu-trigger-line-1.svg) no-repeat center;
+    background: url(../img/svg/menu-trigger-line-1.svg) no-repeat center;
     position: absolute;
     opacity: 1;
     top: 4px;
@@ -246,7 +246,7 @@ main.fade {
     top: 18px;
     width: 31px;
     height: 4px;
-    background: url(../img/SVG/menu-trigger-line-2.svg) no-repeat center;
+    background: url(../img/svg/menu-trigger-line-2.svg) no-repeat center;
 }
 .top_header_ham_menu_btn_wrapper span:nth-child(3) {
     top: 32px;
