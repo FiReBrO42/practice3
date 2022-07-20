@@ -10,7 +10,7 @@ $(function () {
     /* SVG讀取動畫 */
     setTimeout(() => {
 
-        $('#loading_mask_svg').removeClass('is-load')
+        $('#loading_mask_svg').addClass('hide')
 
         }, 1000);/* LOGO time */   
 
@@ -19,14 +19,14 @@ $(function () {
 
         $('#logo_svg').addClass('load')
 
-    }, 1000);/* LOGO time */ 
+    }, 1200);/* LOGO time */ 
 
     /* 中間logo 小字 */
     setTimeout(() => {
 
         $('.top_1_caption_txt').removeClass('hide_opacity')
 
-    }, 3000);/* LOGO time */     
+    }, 3500);/* LOGO time */     
     
     };
 

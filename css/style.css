@@ -152,8 +152,11 @@ main.fade {
 }
 .top_header_logo {
     position: relative;
+    width: 2.8rem;
     height: 100%;
-    width: 100%;
+}
+.top_header_logo {
+    object-fit: contain;
 }
 .top_header_menu_wrapper {
     position: relative;
@@ -418,6 +421,9 @@ main.fade {
     width: 560px;
     height: 196px;
     display: inline-block;
+}
+.top_1_caption_title_wrapper svg {
+    object-fit: contain;
 }
 .top_1_caption_txt {
     font-size: 1rem;
@@ -5199,7 +5205,24 @@ a[data-fancybox] img {
         transform: translateY(-10px);
     }
 }
-
+@keyframes loading {
+    0% {
+    opacity: 0;
+    transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    75% {
+    opacity: 1;
+    transform: scale(10);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(10);
+        }
+}
 /* JS  */
 .js-ham_menu_ani {
     display: none;
@@ -5210,7 +5233,9 @@ a[data-fancybox] img {
     opacity: .3;
 }
 .loading_mask_svg {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -5220,6 +5245,14 @@ a[data-fancybox] img {
     overflow: hidden;
     opacity: 1;
     transition: all 0.3s ease;
+    background-color: var(--background-color);
+}
+.loading_mask_svg img {
+    width: 50vw;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(10);
+    animation: loading 1.5s ;
 }
 .hide_opacity {
     opacity: 0;
