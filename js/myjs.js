@@ -1,36 +1,4 @@
 $(function () {
-    window.onload= showfadein;
-    function showfadein (){
-    /* 淡入*/
-    setTimeout(() => {
-        $('#swup').removeClass('transition-fade');
-        $('#swup').addClass('transition-fade_in');
-    },250);    
-
-    /* SVG讀取動畫 */
-    setTimeout(() => {
-
-        $('#loading_mask_svg').addClass('hide')
-
-        }, 1000);/* LOGO time */   
-
-    /* 中間logo svg動畫 */
-    setTimeout(() => {
-
-        $('#logo_svg').addClass('load')
-
-    }, 1200);/* LOGO time */ 
-
-    /* 中間logo 小字 */
-    setTimeout(() => {
-
-        $('.top_1_caption_txt').removeClass('hide_opacity')
-
-    }, 3500);/* LOGO time */     
-    
-    };
-
-
 /* click */
     $('.top_header_logo_link').on("click",function(){
         $('.active-trail_1').removeClass('active');
@@ -198,33 +166,26 @@ $(function () {
 
 });
 
-/* 圖片位移位置 */
-    var a = document.getElementById('move_img')
-    var a_L = a.offsetLeft;
 
-    window.onscroll = function() {myFunction()};
+window.onload= showfadein;
+    function showfadein (){
+    /* SVG讀取動畫 */
+    setTimeout(() => {
 
-    function myFunction() {
-        /* 捲動高度 */
-        var y = window.pageYOffset;
+        $('#loading_mask_svg').removeClass('ani_loadging')
 
-        /* 圖片移動 */
+    }, 1000);        
 
-        if($(window).width() <= 767){
-            a.style.left = -( a_L + y )/11* 1 + 'px';
-        }
-        else{
-            if($(window).width() >= 768){
-                a.style.left = -( a_L + y )/10* 1 + 'px';
-            }
-            else{
-                if($(window).width() >= 1024){
-                    a.style.left = -( a_L + y )/8* 1 + 'px';
-                }
-                else{
+    /* 中間logo 小字 */
+    setTimeout(() => {
 
-                }
-            }
-        }
-        
+        $('.top_1_caption_txt').removeClass('hide_opacity')
+
+    }, 1200);
+    
+    /* 淡入*/
+    setTimeout(() => {
+        $('#swup').addClass('transition-fade_in');
+    },250);    
+    
     };
