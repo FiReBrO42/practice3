@@ -5195,7 +5195,7 @@ a[data-fancybox] img {
 }
 @keyframes loading {
     0% {
-    opacity: 1;
+    opacity: 0;
     transform: scale(0);
     }
     50% {
@@ -5207,11 +5207,10 @@ a[data-fancybox] img {
     transform: scale(10);
     }
     90% {
-        opacity: 1;
+        opacity: 0;
         transform: scale(10);
         }
      100% {
-	     
             opacity: 0;
             transform: scale(10);
             }
